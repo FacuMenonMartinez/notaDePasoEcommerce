@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navBar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(black, #222823 ) ;
+}
+
+.logo {
+    max-width: 8vw;
+    margin-left: 2vw;
+    margin-top: 2vh;
+}
+
+.div-carrito{
+    display: flex;
+    align-items: flex-end;
+    margin-right: 2vw;
+}
+.carrito-logo{
+    max-width: 3vw;
+
+}
+
+.contador-carrito{
+    color: white;
+    font-weight: bold;
+}

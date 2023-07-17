@@ -1,11 +1,11 @@
-import CartWidget from "./CartWidget"
+import CartWidget from "../CartWidget/CartWidget";
+import icono from "../../assets/icono.png";
 
 function NavBar (){
     return (
-        <nav>
+        <nav className="navBar">
             <div>
-                <h2>Síncopa</h2>
-                <h3>Instrumentos musicales</h3>
+                <img className="logo" src={icono} alt="Logo del sitio"></img>
             </div>
             <div>
                 <button>Instrumentos</button>
