@@ -3,7 +3,7 @@ import icono from "../../assets/icono.png";
 
 function NavBar (){
     return (
-        <nav className="navBar">
+        <nav className="navbar">
             <div>
                 <img className="logo" src={icono} alt="Logo del sitio"></img>
             </div>
