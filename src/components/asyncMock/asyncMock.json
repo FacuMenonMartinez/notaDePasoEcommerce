@@ -1,0 +1,87 @@
+ [
+    {
+        "id": 1,
+        "nombre": "Piano Yamaha p-115",
+        "precio": 700000,
+        "stock": 5,
+        "img": "https://es.yamaha.com/es/files/p-125a_621862cb367f649dfea9aec2f8554a3e.jpg?impolicy=resize&imwid=1080&imhei=1080",
+        "descripcion": "El P-115 cuenta con un teclado de martillos graduados estándar (GHS). El tacto y la sensibilidad del teclado cambia gradualmente según el registro, de modo que la sensación es de mayor peso cuando se tocan partes graves y de más ligereza cuando se tocan partes agudas. El teclado del piano también tiene un tacto natural, con teclas negras con acabado mate que transmiten una experiencia de auténtico piano acústico al tocar.",
+        "categoria": "Instrumento",
+        "subcategoria": "Piano",
+        "marca": "Yamaha"
+    },
+    {
+        "id": 2,
+        "nombre": "Piano Yamaha p-45",
+        "precio": 480000,
+        "stock": 15,
+        "img": "https://es.yamaha.com/es/files/P-45_119_H_P-45_540_540_a71c1616d4f922ae90e21b74816e3b54.jpg?impolicy=resize&imwid=735&imhei=735",
+        "descripcion": "El P-45 cuenta con un teclado de martillos graduados estándar (GHS). El tacto y la sensibilidad del teclado cambia gradualmente según el registro, de modo que la sensación es de mayor peso cuando se tocan partes graves y de más ligereza cuando se tocan partes agudas. El teclado del piano también tiene un tacto natural, con teclas negras con acabado mate que transmiten una experiencia de auténtico piano acústico al tocar.",
+        "categoria": "Instrumento",
+        "subcategoria": "Piano",
+        "marca": "Yamaha"
+    },
+     {
+        "id": 3,
+        "nombre": "Guitarra Yamaha FG850",
+        "precio": 700000,
+        "stock": 3,
+        "img": "https://es.yamaha.com/es/files/E70EE8C3A027451FAAF8A8E13B12F0D9_12073_44d10206747ce3464de50864f108f150.jpg?impolicy=resize&imwid=735&imhei=735",
+        "descripcion": "Una guitarra FG completamente de caoba. La utilización de caoba también para el ribete del cuerpo hace que la sonoridad de las frecuencias medias de este modelo resulte inconfundible, con timbre cálido y sonido a madera.",
+        "categoria": "Instrumento",
+        "subcategoria": "Guitarra",
+        "marca": "Yamaha"
+    }, {
+        "id": 4,
+        "nombre": "Guitarra Yamaha FG820",
+        "precio": 530000,
+        "stock": 5,
+        "img": "https://es.yamaha.com/es/files/68D85D93554041B889B4AE9175910155_12073_b2b58c3d36539c40cbde8cac17cae1d9.jpg?impolicy=resize&imwid=735&imhei=735",
+        "descripcion": "Además de tener un sonido más cálido y potente gracias a su tapa posterior y sus costados de caoba, los ribetes de color crema que bordean el cuerpo y el diapasón le dan un aire de instrumento superior. Hay disponibles una gran variedad de opciones de color.",
+        "categoria": "Instrumento",
+        "subcategoria": "Guitarra",
+        "marca": "Yamaha"
+    }, {
+        "id": 5,
+        "nombre": "Charly Garcia para piano",
+        "precio": 2500,
+        "stock": 10,
+        "img": "https://melos.com.ar/wp-content/uploads/2020/10/609283-MLA43688217925_102020-F.jpg",
+        "descripcion": "Adaptaciones para piano y voz. Lista de canciones: Mariel y el capitan, Cuando ya me empeice a quedar solo, Separata, Cinema Verite, Llorando en el espejo, Viernes 3am, Inconsciente colectivo, Desarma y sangra, Veinte trajes verdes, Promesas sobre el bidet",
+        "categoria": "Partitura",
+        "subcategoria": "Melos",
+        "marca": "Charly Garcia"
+    }, {
+        "id": 6,
+        "nombre": "Carlos Guastavino 10 Cantinelas argentinas",
+        "precio": 3000,
+        "stock": 20,
+        "img": "https://melos.com.ar/wp-content/uploads/2020/10/919501-MLA43688106880_102020-F.jpg",
+        "descripcion": "Piezas para piano. Contenido: Santa Fe para llorar, Adolescencia, Jacarandá, El ceíbo, Abelarda Olmos, Juanita, Herbert, Santa Fe antiguo, Trébol, La casa.",
+        "categoria": "Partitura",
+        "subcategoria": "Melos",
+        "marca": "Carlos Guastavino"
+    }, {
+       "id": 7,
+       "nombre": "Rock argentino para piano",
+       "precio": 3500,
+       "stock": 7,
+       "img": "https://melos.com.ar/wp-content/uploads/2020/10/944731-MLA43688219427_102020-F.jpg",
+       "descripcion": "Adaptaciones para piano y voz de las mejores canciones del rock argentino basadas en las versiones originales por Guilo Villar.Contenidos: En la ciudad de la furia,Crimen, Plegaria para un niño dormido, Bienvenidos al tren, Un vestido y un amor, Pétalo de sal, 11 y 6, El amor después del amor, Siete segundos, Comida china, A primera vista, Cinco siglos igual, De mí.",
+       "categoria": "Partitura",
+       "subcategoria": "Melos",
+       "marca": "Varios"
+    }, {
+        "id": 8,
+        "nombre": "Bach Libro de Ana Magdalena",
+        "precio": 2000,
+        "stock": 20,
+        "img": "https://melos.com.ar/wp-content/uploads/2020/10/784836-MLA43688265474_102020-F.jpg",
+        "descripcion": "Cuatro minues faciles",
+        "categoria": "Partitura",
+        "subcategoria": "Melos",
+        "marca": "Bach"
+    }
+]
+
+  

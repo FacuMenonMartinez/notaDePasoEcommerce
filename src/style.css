@@ -1,4 +1,4 @@
-/* *{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -14,6 +14,7 @@
     max-width: 8vw;
     margin-left: 2vw;
     margin-top: 2vh;
+    cursor: pointer;
 }
 
 .div-carrito{
@@ -29,4 +30,8 @@
 .contador-carrito{
     color: white;
     font-weight: bold;
-} */
+}
+
+.footer{
+    background: linear-gradient(black, #222823 ) ;
+}

@@ -1,30 +1,22 @@
 import CartWidget from "../CartWidget/CartWidget";
 import icono from "../../assets/icono.png";
+import { Link } from "react-router-dom";
 
 function NavBar (){
     return (
-<<<<<<< HEAD
-        <nav className="navbar">
-            <div>
-=======
 
-        
-        
         <nav className="navbar navBar is-black columns">
             <div className="column is-one-quarter">
->>>>>>> 0436027fc680521db5e7696aa335b44750212da7
-                <img className="logo" src={icono} alt="Logo del sitio"></img>
+            <Link to="/"><img className="logo" src={icono} alt="Logo del sitio"></img>
+            </Link>
             </div>
             <div className="column is-half is-flex is-justify-content-space-between">
-            <a className="has-text-white">Instrumentos</a>
-            <a className="has-text-white">Partituras</a>
-            <a className="has-text-white">Contactos</a>
-            {/* <div className="column has-background-danger navbar-item"></div>
-            <div className="column has-background-link navbar-item"></div>
-            <div className="column has-background-primary navbar-item"></div> */}
+            <Link to="/instrumentos" className="has-text-white">Instrumentos</Link>
+            <Link to="/partituras" className="has-text-white">Partituras</Link>
+            <Link to="contacto" className="has-text-white">Contacto</Link>
             </div>
                
-                <CartWidget/>
+            <CartWidget/>
 
             <a className="navbar-burger">
                 <span></span>
