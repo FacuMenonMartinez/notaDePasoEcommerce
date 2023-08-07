@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import ItemListContainer from "../../components/ItemListContainer/ItemListContainer";
 import ElementoBanner from "../../components/ElementoBannerHome/HomeBanner";
-import ProductsList from "../../components/CallApi/CallApi";
-import RenderProductos from "../../components/RenderProductos/RenderProductos"
+import CallApi from "../../components/CallApi/CallApi";
+// import RenderProductos from "../../components/RenderProductos/RenderProductos"
+import ContenedorProductos from "../../components/RenderContenedorProductos/ContenedorProductos";
 import "./Home.css"
 
  function Home(){
@@ -10,7 +11,7 @@ import "./Home.css"
     const [productos, setProductos] = useState([])
 
     async function tomadorProductos (){
-        let productosLlegan = await ProductsList();
+        let productosLlegan = await CallApi();
          setProductos(productosLlegan);
         
     }
@@ -21,16 +22,16 @@ import "./Home.css"
 
 
  
- const [filtrados, setFiltrados] = useState([]);
+//  const [filtrados, setFiltrados] = useState([]);
 
- useEffect(()=>{
-    let listaFiltro =  RenderProductos(productos, "Instrumento")
-    setFiltrados(listaFiltro)
- },[])
+//  useEffect(()=>{
+//     let listaFiltro =  RenderProductos(productos, "Instrumento")
+//     setFiltrados(listaFiltro)
+//  },[])
 
  console.log(productos)
 
- console.log(filtrados)
+//  console.log(filtrados)
 
     // ------------------------------------------------------
     // RenderProductos(productos, "Instrumento");
@@ -47,7 +48,7 @@ import "./Home.css"
                 <ElementoBanner claseBanner="bannerIndividual" claseContenedor="elementoBanner elementoBannerPartituras" claseContenedorTexto="contenedorTexto" claseTexto="textoBanner" redireccion="/partituras" nombreElemento='Partituras'/>
             </div>
             <div>
-
+            <ContenedorProductos arrayProductos={productos}/>
             </div>
         </div>
     )

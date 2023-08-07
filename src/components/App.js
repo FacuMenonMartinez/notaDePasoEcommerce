@@ -5,6 +5,7 @@ import Home from "../pages/Home/Home";
 import Instrumentos from "../pages/Instrumentos/Instrumentos";
 import Partituras from "../pages/Partituras/Partituras";
 import Contacto from "../pages/Contacto/Contacto";
+import DetalleProducto from "../pages/DetalleProducto/DetalleProducto";
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
              <Route index element={<Home/>}></Route>
              <Route path="/instrumentos" element={<Instrumentos/>}></Route>
              <Route path="/partituras" element={<Partituras/>}></Route>
+             <Route path="/:productoNombre" element={<DetalleProducto/>}></Route>
              <Route path="/contacto" element={<Contacto/>}></Route>
 
           </Route>

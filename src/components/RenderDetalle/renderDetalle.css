@@ -1,0 +1,19 @@
+.detalleProducto{
+max-width: 100vw;
+}
+
+
+.imagen{
+    max-width: 40vw;
+}
+
+.descripcion{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.precio{
+    font-size: 1.2rem;
+    font-weight: bold;
+
+}

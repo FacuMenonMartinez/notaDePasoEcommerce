@@ -1,27 +1,27 @@
-function Producto ({imagen, nombre, precio, id}){
+import { Link } from "react-router-dom"
+import { useState, useEffect } from "react"
+
+function Producto ({imagen, nombre, precio}){
+
 
     return (
-        <div>
-            <img>
-                IMAGEN DEL PRODUCTO
+        <div className="box is-flex is-flex-direction-column is-align-items-center column is-3 m-3">
+            <img className="image is-128x128" src={imagen}>
             </img>
-            <h3>
-                TITULO
+            <h3 className="has-text-black has-text-weight-bold is-size-5">
+                {nombre}
             </h3>
-            <div>
-                <div>
-                    <p>
-                        PRECIO
-                    </p>
-                    <button>
-                        VER MAS
-                    </button>
+            <div className="is-flex is-justify-content-space-between is-align-items-center	 ">
+                <div className="has-text-black has-text-weight-medium">
+                    <p>Precio ${precio}</p>
+                    <Link to={`/${nombre}`} className="button is-dark is-small is-responsive">
+                        Ver Mas
+                    </Link>
                 </div>
-                <button>
+                <button className="button has-text-weight-medium ml-2  is-dark is-small is-responsive">
                     AGREGAR AL CARRITO
                 </button>
             </div>
-
         </div>)
 }
 
