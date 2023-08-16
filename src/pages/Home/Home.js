@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import ItemListContainer from "../../components/ItemListContainer/ItemListContainer";
 import ElementoBanner from "../../components/ElementoBannerHome/HomeBanner";
 import CallApi from "../../components/CallApi/CallApi";
-// import RenderProductos from "../../components/RenderProductos/RenderProductos"
 import ContenedorProductos from "../../components/RenderContenedorProductos/ContenedorProductos";
 import "./Home.css"
 
@@ -20,25 +19,7 @@ import "./Home.css"
         tomadorProductos();
     },[])
 
-
- 
-//  const [filtrados, setFiltrados] = useState([]);
-
-//  useEffect(()=>{
-//     let listaFiltro =  RenderProductos(productos, "Instrumento")
-//     setFiltrados(listaFiltro)
-//  },[])
-
  console.log(productos)
-
-//  console.log(filtrados)
-
-    // ------------------------------------------------------
-    // RenderProductos(productos, "Instrumento");
-
-
-    // let nuevoProducto = <RenderProductos array={productos} categoria="Instrumento"/>
-    // console.log(<RenderProductos array={productos} categoria="Instrumento"/>)
     
     return(
         <div>

@@ -24,8 +24,6 @@ import RenderDetalle from "../../components/RenderDetalle/RenderDetalle";
     },[])
         console.log(producto)
 
-    
-
     return(
         <div>
              {

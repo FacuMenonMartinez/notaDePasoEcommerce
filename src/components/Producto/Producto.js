@@ -1,12 +1,11 @@
 import { Link } from "react-router-dom"
-import { useState, useEffect } from "react"
 
 function Producto ({imagen, nombre, precio}){
 
 
     return (
         <div className="box is-flex is-flex-direction-column is-align-items-center column is-3 m-3">
-            <img className="image is-128x128" src={imagen}>
+            <img className="image is-128x128" src={imagen} alt={nombre}>
             </img>
             <h3 className="has-text-black has-text-weight-bold is-size-5">
                 {nombre}
