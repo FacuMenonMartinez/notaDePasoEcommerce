@@ -4,7 +4,7 @@ import ReactDOM from "react-dom/client";
 import "bulma/css/bulma.css";
 import "./style.css";
 
-import App from "./components/App";
+import App from "./App";
 
 
 const el = document.getElementById("root");

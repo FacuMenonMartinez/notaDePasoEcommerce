@@ -1,28 +1,35 @@
-import { useState, useEffect } from "react"
-import ItemListContainer from "../../components/ItemListContainer/ItemListContainer"
-import CallApi from "../../components/CallApi/CallApi";
+import { useState, useEffect } from "react";
+import { db } from "../../config/firebase";
+import { getDocs, collection } from "firebase/firestore";
+import ItemListContainer from "../../components/ItemListContainer/ItemListContainer";
 import ContenedorProductos from "../../components/RenderContenedorProductos/ContenedorProductos";
+import Loading from "../../components/Loading/Loading";
 
 function Partituras (){
     const [partituras, setPartituras] = useState([]);
 
-    async function tomadorProductos(){
-        const productos = await CallApi();
-        const productosAMostrar = productos.filter(item=> item.categoria === "Partitura");
-        setPartituras(productosAMostrar)
+    const fbCollection = collection(db, "productos");
+
+
+    const tomarProductos = async () => {
+        const productos = await getDocs(fbCollection);
+        const filtradoProductos = productos.docs.map((item) => ({ ...item.data(), id: item.id }));
+        setPartituras(filtradoProductos);
     }
 
-    useEffect(()=>{
-        tomadorProductos();
-    },[]);
-
-
+    useEffect(() => {
+        tomarProductos()
+    }, []);
 
     return(
         <div>
             <ItemListContainer greetin='Partituras'/>
-            <ContenedorProductos arrayProductos={partituras}/>
-
+            {partituras.length>0?
+                <ContenedorProductos arrayProductos={partituras} filtro={"Partitura"}/>
+                :<div>
+                    <Loading/>
+                </div>
+            }
         </div>
     )
 }

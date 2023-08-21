@@ -1,28 +1,31 @@
 import { useParams} from "react-router-dom"
 import { useState, useEffect } from "react";
-import CallApi from "../../components/CallApi/CallApi";
+import { db } from "../../config/firebase";
+import { getDocs, collection } from "firebase/firestore";
 import RenderDetalle from "../../components/RenderDetalle/RenderDetalle";
+import Loading from "../../components/Loading/Loading";
 
  function DetalleProducto (){
 
     const {productoNombre} = useParams();
 
+
     const [producto, setProducto]= useState('');
 
-    async function tomadorProductos (){
-        let productosLlegan = await CallApi();
+    const fbCollection = collection(db, "productos");
 
-        let productoRender = productosLlegan.find((producto)=> producto.nombre === productoNombre);
+    const tomarProductos = async () => {
+        const productos = await getDocs(fbCollection);
+        const filtradoProductos = productos.docs.map((item) => ({ ...item.data(), id: item.id }));
 
-        setProducto(productoRender)
-           }
+        let productoRender = filtradoProductos.find((producto)=> producto.nombre === productoNombre);
 
-    useEffect(()=>{
-         tomadorProductos();
-         
+        setProducto(productoRender);
+    }
 
-    },[])
-        console.log(producto)
+    useEffect(() => {
+        tomarProductos()
+    }, []);
 
     return(
         <div>
@@ -30,7 +33,7 @@ import RenderDetalle from "../../components/RenderDetalle/RenderDetalle";
                 producto?  
                 <RenderDetalle producto={producto}></RenderDetalle>  
                 :
-                <div>No existe este producto.</div> 
+                <div><Loading/></div> 
             } 
 
         </div>

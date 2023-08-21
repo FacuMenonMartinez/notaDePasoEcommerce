@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom"
+import BotonCantidad from "../BotonCantidad/BotonCantidad"
 
-function Producto ({imagen, nombre, precio}){
+function Producto ({imagen, nombre, precio, stock}){
 
 
     return (
-        <div className="box is-flex is-flex-direction-column is-align-items-center column is-3 m-3">
+        <div className="box is-flex-shrink-1 is-flex is-flex-direction-column is-align-items-center column is-3 m-3">
             <img className="image is-128x128" src={imagen} alt={nombre}>
             </img>
             <h3 className="has-text-black has-text-weight-bold is-size-5">
@@ -17,9 +18,12 @@ function Producto ({imagen, nombre, precio}){
                         Ver Mas
                     </Link>
                 </div>
-                <button className="button has-text-weight-medium ml-2  is-dark is-small is-responsive">
+                <div>
+                <BotonCantidad stock={stock}/>
+                {/* <button className="button has-text-weight-medium ml-2 is-dark is-small is-responsive">
                     AGREGAR AL CARRITO
-                </button>
+                </button> */}
+                </div>
             </div>
         </div>)
 }
