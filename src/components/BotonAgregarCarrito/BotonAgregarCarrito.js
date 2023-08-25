@@ -1,7 +1,9 @@
-import { useState } from "react" 
+import { useState, useContext } from "react" ;
+import { CarritoContext } from "../Context/ContextCarrito";
 
-function BotonCantidad ({stock, clickAgregar}){
+function BotonAgregarCarrito ({stock, datosProducto}){
 
+    // CONTADOR
 const [cantidad, setCantidad] = useState(1)
 
     const AumentarCantidad = ()=>{
@@ -17,8 +19,12 @@ const [cantidad, setCantidad] = useState(1)
         }
     }
 
-    function AgregarAlCarrito (){
-        clickAgregar(cantidad)
+
+    //AGREGAR AL CARRITO
+    const {AgregarAlCarrito} = useContext(CarritoContext); 
+
+    function handleCarrito (){
+        AgregarAlCarrito(datosProducto, cantidad);
     }
 
 
@@ -30,10 +36,10 @@ const [cantidad, setCantidad] = useState(1)
             <button className="button has-background-dark has-text-light p-3" onClick={AumentarCantidad}>+</button>
             </div>
             <div>
-            <button className="button has-text-weight-medium is-dark is-small is-responsive" onClick={AgregarAlCarrito} >Agregar al carrito</button>
+            <button className="button has-text-weight-medium is-dark is-small is-responsive" onClick={handleCarrito} >Agregar al carrito</button>
             </div>
         </div>
     )
 }
 
-export default BotonCantidad
+export default BotonAgregarCarrito

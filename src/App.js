@@ -1,3 +1,4 @@
+import CarritoProvider from "./components/Context/ContextCarrito";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./pages/Layout/Layout";
 import Home from "./pages/Home/Home";
@@ -9,6 +10,7 @@ import DetalleProducto from "./pages/DetalleProducto/DetalleProducto";
 function App() {
 
     return (
+        <CarritoProvider>
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<Layout />}>
@@ -21,6 +23,9 @@ function App() {
                     </Route>
                 </Routes>
             </BrowserRouter>
+
+        </CarritoProvider>
+
 
     )
 

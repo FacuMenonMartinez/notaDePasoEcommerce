@@ -1,14 +1,23 @@
 import { Link } from "react-router-dom"
-import BotonCantidad from "../BotonCantidad/BotonCantidad"
+import BotonAgregarCarrito from "../BotonAgregarCarrito/BotonAgregarCarrito"
 
-function Producto ({imagen, nombre, precio, stock}){
+function Producto ({imagen, nombre, precio, stock, id}){
+
+
+    const datosProducto={
+        imagen: imagen,
+        nombre: nombre,
+        precio: precio,
+        id: id
+    }
+
 
 
     return (
-        <div className="box is-flex-shrink-1 is-flex is-flex-direction-column is-align-items-center column is-3 m-3">
-            <img className="image is-128x128" src={imagen} alt={nombre}>
+        <div className="box columns is-flex-shrink-1 is-flex is-flex-direction-column is-align-items-center is-3 m-3 column">
+            <img className="column  image is-128x128" src={imagen} alt={nombre}>
             </img>
-            <h3 className="has-text-black has-text-weight-bold is-size-5">
+            <h3 className="column is-full has-text-black has-text-weight-bold is-size-5">
                 {nombre}
             </h3>
             <div className="is-flex is-justify-content-space-between is-align-items-center	 ">
@@ -19,10 +28,7 @@ function Producto ({imagen, nombre, precio, stock}){
                     </Link>
                 </div>
                 <div>
-                <BotonCantidad stock={stock}/>
-                {/* <button className="button has-text-weight-medium ml-2 is-dark is-small is-responsive">
-                    AGREGAR AL CARRITO
-                </button> */}
+                <BotonAgregarCarrito stock={stock} datosProducto={datosProducto}/>
                 </div>
             </div>
         </div>)

@@ -1,12 +1,9 @@
 import "./renderDetalle.css";
-import BotonCantidad from "../BotonCantidad/BotonCantidad";
+import BotonAgregarCarrito from "../BotonAgregarCarrito/BotonAgregarCarrito";
 
 function RenderDetalle ({producto}){
     const {nombre, descripcion, precio, img, id, stock } = producto
 
-   const agregarCarrito=(cantidad)=>{
-    console.log('Cantidad agregada',cantidad,'El precio es', precio*cantidad)
-   }
 
     return(
         <div>
@@ -18,7 +15,7 @@ function RenderDetalle ({producto}){
             </div>
             <div>
                 <p className="precio">${precio}</p>
-                <BotonCantidad stock={stock} clickAgregar={agregarCarrito}/>
+                <BotonAgregarCarrito stock={stock} datosProducto={{nombre, precio, img, id}}/>
             </div>
             </div>
         </div>
