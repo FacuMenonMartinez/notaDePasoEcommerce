@@ -1,5 +1,5 @@
 import {useState} from "react";
-function FormularioCheckout({generarOrden, enviarOrden}){
+function FormularioCheckout({generarOrden}){
 
     const [dataUsuario, setDataUsuario] = useState({email: '', nombre:'',telefono:'',direccion:'' });
 
@@ -7,9 +7,8 @@ function FormularioCheckout({generarOrden, enviarOrden}){
     function ClickFinalizarCompra(e){
         e.preventDefault();
 
-        
         generarOrden(dataUsuario.nombre, dataUsuario.email, dataUsuario.direccion, dataUsuario.telefono);
-        enviarOrden();
+
 
     }
 
