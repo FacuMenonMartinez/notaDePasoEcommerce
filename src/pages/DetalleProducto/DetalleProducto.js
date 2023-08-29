@@ -2,7 +2,7 @@ import { useParams} from "react-router-dom"
 import { useState, useEffect } from "react";
 import { db } from "../../config/firebase";
 import { getDocs, collection } from "firebase/firestore";
-import RenderDetalle from "../../components/RenderDetalle/RenderDetalle";
+import RenderDetalle from "../../components/RenderDetalleProducto/RenderDetalle";
 import Loading from "../../components/Loading/Loading";
 
  function DetalleProducto (){

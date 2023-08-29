@@ -3,7 +3,7 @@ import { db } from "../../config/firebase";
 import { getDocs, collection } from "firebase/firestore";
 import ItemListContainer from "../../components/ItemListContainer/ItemListContainer";
 import ElementoBanner from "../../components/ElementoBannerHome/HomeBanner";
-import ContenedorProductos from "../../components/RenderContenedorProductos/ContenedorProductos";
+import ContenedorProductos from "../../components/ContenedorProductos/ContenedorProductos";
 import Loading from "../../components/Loading/Loading";
 import "./Home.css"
 
@@ -35,15 +35,15 @@ function Home() {
             </div>
             <div>
                 {prodContext.length>0?
-                <div>
-                <h2 className="pl-3 title has-text-dark	">Instrumentos</h2>
-                <ContenedorProductos arrayProductos={prodContext} filtro={"Instrumento"} />
-                <h2 className="pl-3 title has-text-dark	">Partituras</h2>
-                <ContenedorProductos arrayProductos={prodContext} filtro={"Partitura"} />
-                </div>
-                :<div>
-                    <Loading/>
-                 </div>
+                    <div>
+                         <h2 className="pl-3 title has-text-dark	">Instrumentos</h2>
+                         <ContenedorProductos arrayProductos={prodContext} filtro={"Instrumento"} />
+                         <h2 className="pl-3 title has-text-dark	">Partituras</h2>
+                         <ContenedorProductos arrayProductos={prodContext} filtro={"Partitura"} />
+                    </div>
+                    :<div>
+                        <Loading/>
+                    </div>
             }
             </div>
         </div>

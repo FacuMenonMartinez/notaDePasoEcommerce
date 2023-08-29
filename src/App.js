@@ -6,6 +6,8 @@ import Instrumentos from "./pages/Instrumentos/Instrumentos";
 import Partituras from "./pages/Partituras/Partituras";
 import Contacto from "./pages/Contacto/Contacto";
 import DetalleProducto from "./pages/DetalleProducto/DetalleProducto";
+import Checkout from "./pages/Checkout/Checkout";
+import PaginaError from "./pages/PaginaError/PaginaError";
 
 function App() {
 
@@ -17,9 +19,10 @@ function App() {
                         <Route index element={<Home />}></Route>
                         <Route path="/instrumentos" element={<Instrumentos />}></Route>
                         <Route path="/partituras" element={<Partituras />}></Route>
-                        <Route path="/:productoNombre" element={<DetalleProducto />}></Route>
+                        <Route path="/:productoNombre" element={<DetalleProducto/>}></Route>
                         <Route path="/contacto" element={<Contacto />}></Route>
-
+                        <Route path="/checkout" element={<Checkout/>}></Route>
+                        <Route path="*" element={<h1>Pagina no encontrada</h1>}></Route>
                     </Route>
                 </Routes>
             </BrowserRouter>

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { db } from "../../config/firebase";
 import { getDocs, collection } from "firebase/firestore";
 import ItemListContainer from "../../components/ItemListContainer/ItemListContainer";
-import ContenedorProductos from "../../components/RenderContenedorProductos/ContenedorProductos";
+import ContenedorProductos from "../../components/ContenedorProductos/ContenedorProductos";
 import Loading from "../../components/Loading/Loading";
 
 

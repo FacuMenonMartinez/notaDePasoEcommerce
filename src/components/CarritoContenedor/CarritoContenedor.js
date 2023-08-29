@@ -1,5 +1,5 @@
-import { useContext } from "react"
-import { CarritoContext } from "../Context/ContextCarrito"
+import { useContext } from "react";
+import { CarritoContext } from "../Context/ContextCarrito";
 import { IoCloseCircleSharp } from "react-icons/io5";
 
 import "./carritoContenedor.css"
@@ -11,9 +11,7 @@ function CarritoContenedor (){
 
     return(
         <aside className="carritoContenedor">
-            {/* <h3>Carrito Contenedor</h3> */}
 
-            {/* <p>Extension del carrito: {carritoArray.length}</p> */}
             {carritoArray.length>0
                 ?carritoArray.map(item=>{
                     return <div className="carritoItem" key={item.producto.id}>

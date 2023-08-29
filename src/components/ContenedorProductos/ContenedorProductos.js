@@ -1,4 +1,4 @@
-import Producto from "../Producto/Producto"
+import Producto from "../ProductoItem/Producto"
 
 function ContenedorProductos ({arrayProductos, filtro}){
 
