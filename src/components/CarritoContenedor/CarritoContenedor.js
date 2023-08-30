@@ -1,16 +1,21 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { CarritoContext } from "../Context/ContextCarrito";
 import { IoCloseCircleSharp } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 import "./carritoContenedor.css"
 
 function CarritoContenedor (){
-    const {carritoArray}= useContext(CarritoContext);
+
+    
+    const {carritoArray, EliminarItem, EliminarCarrito, mostrarCarrito}= useContext(CarritoContext);
+
     const sumaTotal = carritoArray.reduce((acc, valor)=> acc + valor.totalItem, 0 );
     console.log( "La suma total es:",sumaTotal);
+ 
 
     return(
-        <aside className="carritoContenedor">
+        <aside className={mostrarCarrito}>
 
             {carritoArray.length>0
                 ?carritoArray.map(item=>{
@@ -21,11 +26,15 @@ function CarritoContenedor (){
                             <p>Cantidad: {item.cantidad}</p>
                             <p>Precio: ${item.totalItem}</p>
                         </div>
-                        <IoCloseCircleSharp className="iconoBorrar"/>
+                        <div onClick={()=>{EliminarItem(item.producto.id)}}>
+                            <IoCloseCircleSharp  className="iconoBorrar"/>
+                        </div>
                     </div>
                 })
                 :<h3>No hay productos en tu carrito.</h3>}
-            <span>Total: ${sumaTotal}</span>    
+                <span>Total: ${sumaTotal}</span>
+                <Link to="/checkout"><button className="button is-black is-small ml-3">Terminar Compra</button></Link>
+                <button className="button is-black is-small ml-3" onClick={EliminarCarrito}>Eliminar Carrito</button>
         </aside>
     )
 }

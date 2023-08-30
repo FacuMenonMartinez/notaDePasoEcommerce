@@ -21,6 +21,7 @@ import Loading from "../../components/Loading/Loading";
         let productoRender = filtradoProductos.find((producto)=> producto.nombre === productoNombre);
 
         setProducto(productoRender);
+        
     }
 
     useEffect(() => {

@@ -4,12 +4,9 @@ export const CarritoContext = createContext();
 
 const CarritoProvider = ({ children }) => {
 
+    
+// Carrito y todo lo relacionado a su funcionamiento
     const [carritoArray, setCarritoArray] = useState([]);
-
-
-    // const data ={
-    //     AgregarAlCarrito
-    // }
 
     const AgregarAlCarrito = (producto, cantidad) => {
 
@@ -24,14 +21,41 @@ const CarritoProvider = ({ children }) => {
 
         setCarritoArray([...carritoArray, productoAgregado]);
 
-
     }
-    console.log(carritoArray);
+
+    const EliminarItem=(id)=>{
+        const item = carritoArray.filter(producto=> producto.producto.id !== id);
+        setCarritoArray(item);
+    }
+
+    const EliminarCarrito=()=>{
+        setCarritoArray([]);
+    }
+
+
+    // Modificar la clase para que se muestre y se oculte
+
+    const [mostrarCarrito, setMostrarCarrito]=useState("carritoContenedor");
+
+    function MostrarOcultarCarrito (){
+        if(mostrarCarrito.includes("carritoContenedorMostrar")){
+            setMostrarCarrito("carritoContenedor");
+        }else{
+            setMostrarCarrito("carritoContenedor carritoContenedorMostrar");
+        }
+    }
+
 
     const value = {
+        setCarritoArray,
         carritoArray,
-        AgregarAlCarrito
+        AgregarAlCarrito,
+        EliminarItem,
+        EliminarCarrito,
+        mostrarCarrito,
+        MostrarOcultarCarrito
     }
+    
 
 
     return (

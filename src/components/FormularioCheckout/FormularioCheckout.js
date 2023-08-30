@@ -6,9 +6,7 @@ function FormularioCheckout({generarOrden}){
 
     function ClickFinalizarCompra(e){
         e.preventDefault();
-
         generarOrden(dataUsuario.nombre, dataUsuario.email, dataUsuario.direccion, dataUsuario.telefono);
-
 
     }
 
@@ -16,10 +14,10 @@ function FormularioCheckout({generarOrden}){
 
     return(
             <form>
-                <input onBlur={(e)=>{setDataUsuario({...dataUsuario, email:e.target.value})}} type="email" placeholder="Email"></input>
-                <input onBlur={(e)=>{setDataUsuario({...dataUsuario, nombre:e.target.value})}} type="text" placeholder="Nombre"></input>
-                <input onBlur={(e)=>{setDataUsuario({...dataUsuario, direccion:e.target.value})}} type="text" placeholder="Direccion"></input>
-                <input onBlur={(e)=>{setDataUsuario({...dataUsuario, telefono:e.target.value})}} type="number" placeholder="Telefono"></input>
+                <input onChange={(e)=>{setDataUsuario({...dataUsuario, email:e.target.value})}} type="email" placeholder="Email"></input>
+                <input onChange={(e)=>{setDataUsuario({...dataUsuario, nombre:e.target.value})}} type="text" placeholder="Nombre"></input>
+                <input onChange={(e)=>{setDataUsuario({...dataUsuario, direccion:e.target.value})}} type="text" placeholder="Direccion"></input>
+                <input onChange={(e)=>{setDataUsuario({...dataUsuario, telefono:e.target.value})}} type="number" placeholder="Telefono"></input>
                 <button onClick={ClickFinalizarCompra}>Finalizar Compra</button>
             </form>
     )

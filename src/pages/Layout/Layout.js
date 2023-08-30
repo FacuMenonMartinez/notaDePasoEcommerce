@@ -9,7 +9,7 @@ function Layout (){
     return(
         <div>
         <NavBar/>
-        {/* <CarritoContenedor/> */}
+        <CarritoContenedor/>
         <Outlet/>
         <Footer/>
 

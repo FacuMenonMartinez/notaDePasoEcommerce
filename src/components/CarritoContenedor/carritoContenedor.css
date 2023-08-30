@@ -4,7 +4,7 @@
     width: 28vw;
     padding: 1vw;
     z-index: 1;
-    left: 70vw;
+    left: 115vw;
     transition: all 1s;
 
 }
@@ -14,7 +14,7 @@
 }
 
 .carritoContenedorMostrar{
-    left: 75vw;
+    left: 70vw;
     transition: all 1s;
 }
 
