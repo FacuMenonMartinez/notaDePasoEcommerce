@@ -16,25 +16,29 @@ function CarritoContenedor (){
 
     return(
         <aside className={mostrarCarrito}>
-
+            <h3 className="has-text-light is-size-4 has-text-centered">Carrito de compras</h3>
             {carritoArray.length>0
                 ?carritoArray.map(item=>{
-                    return <div className="carritoItem" key={item.producto.id}>
-                        <img className="imagenCarrito" src={item.producto.imagen}></img>
-                        <div>
-                            <h2>Nombre: {item.producto.nombre}</h2>
+                    return <div className="is-flex is-justify-content-space-between	 pb-4 mt-3 mx-auto box has-background-black carritoItem " key={item.producto.id}>
+                        <img className=" image is-64x64 imagenCarrito" src={item.producto.imagen}></img>
+                        <div className="has-text-light pl-2">
+                            <h4 className=" is-size-7-mobile">{item.producto.nombre}</h4>
                             <p>Cantidad: {item.cantidad}</p>
-                            <p>Precio: ${item.totalItem}</p>
+                            <p>${item.totalItem}</p>
                         </div>
                         <div onClick={()=>{EliminarItem(item.producto.id)}}>
                             <IoCloseCircleSharp  className="iconoBorrar"/>
                         </div>
                     </div>
                 })
-                :<h3>No hay productos en tu carrito.</h3>}
-                <span>Total: ${sumaTotal}</span>
-                <Link to="/checkout"><button className="button is-black is-small ml-3">Terminar Compra</button></Link>
-                <button className="button is-black is-small ml-3" onClick={EliminarCarrito}>Eliminar Carrito</button>
+                :<h4 className="has-text-light pl-2" >No hay productos en tu carrito.</h4>}
+                <div className="columns is-multiline p-2 pr-5">
+                    <span className="has-text-light column is-full">Total: ${sumaTotal}</span>
+                    <Link className="column is-narrow is-two-quarters-mobile" to="/checkout"><button className="button is-black is-responsive">Terminar Compra</button></Link>
+                    <div className="column">
+                        <button className="button is-black  is-responsive" onClick={EliminarCarrito}>Eliminar Carrito</button>
+                    </div>
+                </div>
         </aside>
     )
 }

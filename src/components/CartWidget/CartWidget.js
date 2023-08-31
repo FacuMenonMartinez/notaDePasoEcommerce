@@ -9,9 +9,9 @@ function CartWidget (){
 
 
     return (
-        <div onClick={MostrarOcultarCarrito} className="div-carrito column navbar-item is-one-quarter is-clickable">
-            <img className="carrito-logo"  src={carrito} alt="Carrito de Compras" />
-            <div className="contador-carrito">{carritoArray.length}</div>
+        <div className="is-flex navbar-item">
+            <img  className="is-clickable"  src={carrito} alt="Carrito de Compras" onClick={MostrarOcultarCarrito} />
+            <div className="mt-4 is-size-6 has-text-white has-text-weight-semibold">{carritoArray.length}</div>
         </div>
     )
 };

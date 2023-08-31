@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .navbar-item:hover{
     background-color: rgba(0, 0, 0, 0)!important;
 }
@@ -6,4 +11,12 @@
 }
 .navbar-item{
     background-color: rgba(0, 0, 0, 0)!important;
+}
+
+.navBar{
+    background: linear-gradient(black, #222823 ) ;
+}
+
+.hoverMenu:hover{
+    text-decoration: underline;
 }

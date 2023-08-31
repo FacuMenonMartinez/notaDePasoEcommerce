@@ -23,7 +23,7 @@ function Producto ({imagen, nombre, precio, stock, id}){
             <div className="is-flex is-justify-content-space-between is-align-items-center	 ">
                 <div className="has-text-black has-text-weight-medium">
                     <p>Precio ${precio}</p>
-                    <Link to={`/producto/${nombre}`} className="button is-dark is-small is-responsive">
+                    <Link to={`/producto/${nombre}`} className="button is-dark mt-4 is-responsive">
                         Ver Mas
                     </Link>
                 </div>

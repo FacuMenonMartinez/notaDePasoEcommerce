@@ -1,4 +1,5 @@
-import Producto from "../ProductoItem/Producto"
+import Producto from "../ProductoItem/Producto";
+import "./ContenedorProductos.css"
 
 function ContenedorProductos ({arrayProductos, filtro}){
 
@@ -7,7 +8,7 @@ function ContenedorProductos ({arrayProductos, filtro}){
     return(
         <div>
 
-            <div className="columns is-desktop has-background-black p-5 m-2">
+            <div className="contenedorProductos columns is-desktop has-background-black p-5 m-3">
             { productos.map(producto=>{
                 return <Producto key={producto.id} imagen={producto.img} nombre={producto.nombre} precio={producto.precio} id={producto.id} stock={producto.stock}/>
                 })

@@ -2,7 +2,6 @@ import { useState } from "react";
 import CartWidget from "../CartWidget/CartWidget";
 import icono from "../../assets/icono.png";
 import { Link } from "react-router-dom";
-
 import "./navbar.css";
 
 function NavBar (){
@@ -18,7 +17,7 @@ function NavBar (){
         <nav className="navbar navBar">
             <div className="navbar-brand">
                 <div>
-                    <Link className="" to="/"><img className="logo" src={icono} alt="Logo del sitio"></img></Link>
+                    <Link className="px-2 py-3 image is-96x96" to="/"><img src={icono} alt="Logo del sitio"></img></Link>
                 </div>
                 <div className={`navbar-burger burger ${isActive ? 'is-active' : ''}`} onClick={toggleMenu}>
                     <span></span>
@@ -29,9 +28,9 @@ function NavBar (){
             </div>
 
             <div className={`navbar-menu ${isActive ? 'is-active' : ''}`}>
-                <Link to="/instrumentos" className="has-text-white navbar-item">Instrumentos</Link>
-                <Link to="/partituras" className="has-text-white navbar-item">Partituras</Link>
-                <Link to="/contacto" className="has-text-white navbar-item">Contacto</Link>
+                <Link to="/instrumentos" className="hoverMenu has-text-white navbar-item">Instrumentos</Link>
+                <Link to="/partituras" className="hoverMenu has-text-white navbar-item">Partituras</Link>
+                <Link to="/contacto" className="hoverMenu has-text-white navbar-item">Contacto</Link>
                 <CartWidget/>
             </div>
 

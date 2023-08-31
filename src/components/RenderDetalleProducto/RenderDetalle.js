@@ -1,23 +1,25 @@
 import "./renderDetalle.css";
 import BotonAgregarCarrito from "../BotonAgregarCarrito/BotonAgregarCarrito";
 
-function RenderDetalle ({producto}){
-    const {nombre, descripcion, precio, img, id, stock } = producto
+function RenderDetalle({ producto }) {
+    const { nombre, descripcion, precio, img, id, stock } = producto
 
 
-    return(
+    return (
         <div>
-            <h1>{nombre}</h1>
-            <div className="is-flex is-align-items-center p-3 columns">
-            <div className="is-flex is-flex-direction-column is-align-items-center column is-three-fifths">
-                <img className="imagen" src={img}></img>
-                <p className="descripcion">{descripcion}</p>
+            <h1 className="title is-size-4-mobile has-text-centered-mobile ml-3 mt-3">{nombre}</h1>
+            <div className="p-3 columns is-gapless is-multiline is-mobile">
+            <div className="column is-three-quarter is-full-mobile image is1by1">
+                <img className="mx-auto imagen"src={img}></img>
             </div>
-            <div>
-                <p className="precio">${precio}</p>
+            <div className="column is-full-mobile">
+                <p className="is-size-3 is-size-4-mobile has-text-black has-text-weight-bold has-text-centered">${precio}</p>
                 <BotonAgregarCarrito stock={stock} datosProducto={{nombre, precio, img, id}}/>
             </div>
+            <p className="has-text-black is-size-4 is-size-5-mobile column is-full has-text-centered-mobile">{descripcion}</p>
+
             </div>
+
         </div>
     )
 }

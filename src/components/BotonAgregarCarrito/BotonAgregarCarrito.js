@@ -29,14 +29,14 @@ const [cantidad, setCantidad] = useState(1)
 
 
     return (
-        <div className="is-flex is-flex-direction-column ml-2">
-            <div className="is-flex">
-            <button className="button has-background-dark has-text-light p-3" onClick={DisminuirCantidad}> - </button>
-            <h5 className="box has-background-grey-lighter has-text-bold mx-3 mb-1 p-2 px-2">{cantidad}</h5>
-            <button className="button has-background-dark has-text-light p-3" onClick={AumentarCantidad}>+</button>
+        <div className="columns is-multiline ml-2 is-centered">
+            <div className="is-flex is-justify-content-center column ">
+                <button className="button has-background-dark has-text-white p-3" onClick={DisminuirCantidad}> - </button>
+                 <h5 className="has-background-grey-lighter has-text-bold mx-3 p-2 px-3">{cantidad}</h5>
+                 <button className="button has-background-dark has-text-white p-3" onClick={AumentarCantidad}>+</button>
             </div>
-            <div>
-            <button className="button has-text-weight-medium is-dark is-small is-responsive" onClick={handleCarrito} >Agregar al carrito</button>
+            <div className="column is-full is-flex is-justify-content-center">
+                <button className="button has-text-weight-medium is-dark is-responsive" onClick={handleCarrito} >Agregar al carrito</button>
             </div>
         </div>
     )

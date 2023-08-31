@@ -29,16 +29,16 @@ function Home() {
         <div>
 
             <ItemListContainer greetin='Bienvenidos a mi tienda online' />
-            <div className="contenedorBanner">
-                <ElementoBanner claseBanner="bannerIndividual" claseContenedor="elementoBanner elementoBannerInstrumentos" claseContenedorTexto="contenedorTexto" claseTexto="textoBanner" redireccion="/instrumentos" nombreElemento='Instrumentos' />
-                <ElementoBanner claseBanner="bannerIndividual" claseContenedor="elementoBanner elementoBannerPartituras" claseContenedorTexto="contenedorTexto" claseTexto="textoBanner" redireccion="/partituras" nombreElemento='Partituras' />
+            <div className="columns mx-auto mb-6 contenedorBanner">
+                <ElementoBanner claseContenedor="elementoBannerInstrumentos" redireccion="/instrumentos" nombreElemento='Instrumentos' />
+                <ElementoBanner claseContenedor="elementoBannerPartituras" redireccion="/partituras" nombreElemento='Partituras' />
             </div>
             <div>
                 {prodContext.length>0?
                     <div>
-                         <h2 className="pl-3 title has-text-dark	">Instrumentos</h2>
+                         <h2 className="pl-3 title is-2 has-text-black has-text-centered-mobile">Instrumentos</h2>
                          <ContenedorProductos arrayProductos={prodContext} filtro={"Instrumento"} />
-                         <h2 className="pl-3 title has-text-dark	">Partituras</h2>
+                         <h2 className="pl-3 title is-2 has-text-black has-text-centered-mobile">Partituras</h2>
                          <ContenedorProductos arrayProductos={prodContext} filtro={"Partitura"} />
                     </div>
                     :<div>
