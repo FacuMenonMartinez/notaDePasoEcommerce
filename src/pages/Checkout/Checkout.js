@@ -4,6 +4,7 @@ import { addDoc, collection } from "firebase/firestore";
 import { CarritoContext } from "../../components/Context/ContextCarrito";
 import FormularioCheckout from "../../components/FormularioCheckout/FormularioCheckout";
 import ResumenPedido from "../../components/ResumenPedido/ResumenPedido";
+import ItemListContainer from "../../components/ItemListContainer/ItemListContainer"
 
 function Checkout() {
     // Estado de lo que se va a enviar como pedido
@@ -70,11 +71,14 @@ function Checkout() {
 
     return (
         <div>
-            <h1>Finaliza tu compra</h1>
+            {/* <ItemListContainer greetin='Finaliza tu compra'/> */}
             {!orderId
-                ?<FormularioCheckout generarOrden={GenerarOrden} />
+                ?<div>
+                    <ItemListContainer greetin='Finaliza tu compra'/>
+                    <FormularioCheckout generarOrden={GenerarOrden} />
+                    </div>
                 :(<div>
-                    <h2 className="has-text-black">El Id del pedido es {orderId}</h2>
+                    <ItemListContainer greetin='¡Gracias por tu compra!'/>
                     <ResumenPedido docId={orderId}/>
                 </div>
 
