@@ -2,6 +2,8 @@ import { useContext, useState } from "react";
 import { CarritoContext } from "../Context/ContextCarrito";
 import { IoCloseCircleSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import "./carritoContenedor.css"
 
@@ -12,7 +14,8 @@ function CarritoContenedor (){
 
     const sumaTotal = carritoArray.reduce((acc, valor)=> acc + valor.totalItem, 0 );
     console.log( "La suma total es:",sumaTotal);
- 
+    
+    console.log(carritoArray);
 
     return(
         <aside className={mostrarCarrito}>
@@ -20,7 +23,7 @@ function CarritoContenedor (){
             {carritoArray.length>0
                 ?carritoArray.map(item=>{
                     return <div className="is-flex is-justify-content-space-between	 pb-4 mt-3 mx-auto box has-background-black carritoItem " key={item.producto.id}>
-                        <img className=" image is-64x64 imagenCarrito" src={item.producto.imagen}></img>
+                        <img className=" image is-64x64 imagenCarrito" src={item.producto.img || item.producto.imagen}></img>
                         <div className="has-text-light pl-2">
                             <h4 className=" is-size-7-mobile">{item.producto.nombre}</h4>
                             <p>Cantidad: {item.cantidad}</p>
@@ -28,6 +31,7 @@ function CarritoContenedor (){
                         </div>
                         <div onClick={()=>{EliminarItem(item.producto.id)}}>
                             <IoCloseCircleSharp  className="iconoBorrar"/>
+                            <ToastContainer/>
                         </div>
                     </div>
                 })
@@ -37,6 +41,8 @@ function CarritoContenedor (){
                     <Link className="column is-narrow is-two-quarters-mobile" to="/checkout"><button className="button is-black is-responsive">Terminar Compra</button></Link>
                     <div className="column">
                         <button className="button is-black  is-responsive" onClick={EliminarCarrito}>Eliminar Carrito</button>
+                        <ToastContainer/>
+
                     </div>
                 </div>
         </aside>

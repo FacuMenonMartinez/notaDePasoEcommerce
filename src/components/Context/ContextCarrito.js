@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-
+import { toast } from 'react-toastify';
 export const CarritoContext = createContext();
 
 const CarritoProvider = ({ children }) => {
@@ -13,6 +13,7 @@ const CarritoProvider = ({ children }) => {
         const productoAgregado = {
             producto: producto,
             cantidad: cantidad,
+            imagen: producto.img,
             totalItem: producto.precio * cantidad
         }
 
@@ -21,15 +22,47 @@ const CarritoProvider = ({ children }) => {
 
         setCarritoArray([...carritoArray, productoAgregado]);
 
+        toast('Producto agreado al carrito', {
+            position: "top-right",
+            autoClose: 1000,
+            hideProgressBar: true,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            });
     }
 
     const EliminarItem=(id)=>{
         const item = carritoArray.filter(producto=> producto.producto.id !== id);
         setCarritoArray(item);
+
+        toast('Producto eliminado del carrito', {
+            position: "top-right",
+            autoClose: 1000,
+            hideProgressBar: true,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            });
     }
 
     const EliminarCarrito=()=>{
         setCarritoArray([]);
+
+        toast('Carrito eliminado', {
+            position: "top-right",
+            autoClose: 1000,
+            hideProgressBar: true,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            });
     }
 
 

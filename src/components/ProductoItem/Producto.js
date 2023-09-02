@@ -14,7 +14,7 @@ function Producto ({imagen, nombre, precio, stock, id}){
 
 
     return (
-        <div className="box columns is-flex-shrink-1 is-flex-grow-1 is-flex is-flex-direction-column is-align-items-center is-3 m-3 column">
+        <div className="box columns is-flex-shrink-1 is-flex-grow-1 is-flex is-flex-direction-column is-align-items-center is-1 m-3 column">
             <img className="column  image is-128x128" src={imagen} alt={nombre}>
             </img>
             <h3 className="column is-full has-text-black has-text-weight-bold is-size-5">
@@ -23,12 +23,12 @@ function Producto ({imagen, nombre, precio, stock, id}){
             <div className="is-flex is-justify-content-space-between is-align-items-center	 ">
                 <div className="has-text-black has-text-weight-medium">
                     <p>Precio ${precio}</p>
-                    <Link to={`/producto/${nombre}`} className="button is-dark mt-4 is-responsive">
+                    <Link to={`/producto/${nombre}`} className="button is-dark is-small mt-4 is-responsive">
                         Ver Mas
                     </Link>
                 </div>
                 <div>
-                <BotonAgregarCarrito  stock={stock} datosProducto={datosProducto}/>
+                    <BotonAgregarCarrito  stock={stock} datosProducto={datosProducto}/>
                 </div>
             </div>
         </div>)

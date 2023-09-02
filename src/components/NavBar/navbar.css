@@ -20,3 +20,19 @@
 .hoverMenu:hover{
     text-decoration: underline;
 }
+
+.contenedorContadorResponsive{
+
+    display: none;
+}
+
+@media (max-width: 1023px){
+    .contenedorContadorResponsive{
+        width: 24px;
+        height: 24px;
+        background-color: red;
+        margin-left: auto;
+        border-radius: 50%;
+        display: block;
+    }
+}

@@ -50,7 +50,6 @@ function Checkout() {
     }
 
 
-
     // Funcion que se fija que la orden no este vacia y la carga en firebase
     const enviarOrden = async () => {
        const docRef = await addDoc(fbCheckout, ordenGenerada);
@@ -65,13 +64,8 @@ function Checkout() {
 
     }
 
-
-
-
-
     return (
         <div>
-            {/* <ItemListContainer greetin='Finaliza tu compra'/> */}
             {!orderId
                 ?<div>
                     <ItemListContainer greetin='Finaliza tu compra'/>

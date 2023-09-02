@@ -16,7 +16,9 @@ function RenderDetalle({ producto }) {
                 <p className="is-size-3 is-size-4-mobile has-text-black has-text-weight-bold has-text-centered">${precio}</p>
                 <BotonAgregarCarrito stock={stock} datosProducto={{nombre, precio, img, id}}/>
             </div>
-            <p className="has-text-black is-size-4 is-size-5-mobile column is-full has-text-centered-mobile">{descripcion}</p>
+            <div className="box has-background-grey-lighter my-3 column is-full ">
+                <p className="has-text-black is-size-4 is-size-5-mobile has-text-centered-mobile p-3 " >Descripcion: <br/>{descripcion}</p>
+            </div>
 
             </div>
 

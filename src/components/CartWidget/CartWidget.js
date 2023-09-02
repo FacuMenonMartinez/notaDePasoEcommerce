@@ -9,7 +9,7 @@ function CartWidget (){
 
 
     return (
-        <div className="is-flex navbar-item">
+        <div className="is-flex navbar-item is-justify-content-center">
             <img  className="is-clickable"  src={carrito} alt="Carrito de Compras" onClick={MostrarOcultarCarrito} />
             <div className="mt-4 is-size-6 has-text-white has-text-weight-semibold">{carritoArray.length}</div>
         </div>

@@ -1,15 +1,21 @@
 .carritoContenedor{
     background-color: hsla(0, 0%, 0%, 0.856);
-    position: absolute;
+    position: fixed;
+    max-height: 75vh;
+    overflow-y: scroll;
     width: 30vw;
     padding: 1vw;
-    left: 110vw;
+    left: 200vw;
     transition: all 1s;
+
 }
 
+.carritoContenedor::-webkit-scrollbar {
+    width: 12px; /* Ancho de la barra de desplazamiento */
+  }
 
 .carritoContenedorMostrar{
-    left:70vw;
+    left:68vw;
     z-index: 1;
     transition: all 1s;
 }
@@ -32,6 +38,7 @@
     .carritoContenedor{
         width: 100vw;
         display:none;
+        position: absolute;
         left: 110vw;
         transition: all 1s;
         margin-top: 1vh;
