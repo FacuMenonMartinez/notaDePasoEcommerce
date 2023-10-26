@@ -8,7 +8,7 @@ function ContenedorProductos ({arrayProductos, filtro}){
     return(
         <div>
 
-            <div className="contenedorProductos  columns is-desktop has-background-black p-2 m-3">
+            <div className="contenedorProductos columns is-desktop has-background-black p-2 m-3">
             { productos.map(producto=>{
                 return <Producto key={producto.id} imagen={producto.img} nombre={producto.nombre} precio={producto.precio} id={producto.id} stock={producto.stock}/>
                 })

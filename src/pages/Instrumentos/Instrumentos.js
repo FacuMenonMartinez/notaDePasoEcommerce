@@ -24,7 +24,7 @@ function Instrumentos (){
 
 
     return(
-        <div>
+        <div className="contenedorGeneral">
             <ItemListContainer greetin='Instrumentos'/>
             {instrumentos.length>0?
                 <ContenedorProductos arrayProductos={instrumentos} filtro={"Instrumento"}/>

@@ -22,7 +22,7 @@ function Partituras (){
         }, []);
 
     return(
-        <div>
+        <div className="contenedorGeneral">
             <ItemListContainer greetin='Partituras'/>
             {partituras.length>0?
                 <ContenedorProductos arrayProductos={partituras} filtro={"Partitura"}/>

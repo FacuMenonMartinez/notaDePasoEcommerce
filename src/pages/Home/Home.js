@@ -26,7 +26,7 @@ function Home() {
 
 
     return (
-        <div>
+        <div className="contenedorGeneral">
 
             <ItemListContainer greetin='Bienvenidos a mi tienda online' />
             <div className="columns mx-auto mb-6 contenedorBanner">

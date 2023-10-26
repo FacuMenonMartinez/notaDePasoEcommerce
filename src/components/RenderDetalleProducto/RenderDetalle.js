@@ -10,7 +10,7 @@ function RenderDetalle({ producto }) {
             <h1 className="title is-size-4-mobile has-text-centered-mobile ml-3 mt-3">{nombre}</h1>
             <div className="p-3 columns is-gapless is-multiline is-mobile">
             <div className="column is-three-quarter is-full-mobile image is1by1">
-                <img className="mx-auto imagen"src={img}></img>
+                <img className="mx-auto p-2 imagen"src={img}></img>
             </div>
             <div className="column is-full-mobile">
                 <p className="is-size-3 is-size-4-mobile has-text-black has-text-weight-bold has-text-centered">${precio}</p>

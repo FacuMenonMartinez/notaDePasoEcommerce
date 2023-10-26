@@ -65,7 +65,7 @@ function Checkout() {
     }
 
     return (
-        <div>
+        <div className="contenedorGeneral">
             {!orderId
                 ?<div>
                     <ItemListContainer greetin='Finaliza tu compra'/>

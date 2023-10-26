@@ -34,7 +34,6 @@ function NavBar (){
             <div className={`navbar-menu ${isActive ? 'is-active' : ''}`}>
                 <Link to="/instrumentos" className="hoverMenu has-text-white navbar-item">Instrumentos</Link>
                 <Link to="/partituras" className="hoverMenu has-text-white navbar-item">Partituras</Link>
-                <Link to="/contacto" className="hoverMenu has-text-white navbar-item">Contacto</Link>
                 <CartWidget/>
 
             </div>

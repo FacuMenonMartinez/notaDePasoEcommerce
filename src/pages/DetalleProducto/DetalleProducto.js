@@ -29,7 +29,7 @@ import Loading from "../../components/Loading/Loading";
     }, []);
 
     return(
-        <div>
+        <div className="contenedorGeneral">
              {
                 producto?  
                 <RenderDetalle producto={producto}></RenderDetalle>  
