@@ -22,3 +22,10 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# public
+asyncMock.json
+favicon.ico
+logo192.pgn
+logo512.pgn
+manifest.json
